@@ -26,11 +26,21 @@ const Navbar = () => {
     };
   }, []);
 
+  const burgerIconStyle = {
+    width: '1.5em',
+    height: '1.5em',
+    display: 'inline-block',
+    background: isOpen
+      ? 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\'%3E%3Cpath d=\'M6 18L18 6M6 6l12 12\' stroke=\'white\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/%3E%3C/svg%3E") no-repeat center center'
+      : 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\'%3E%3Cpath d=\'M4 6h16M4 12h16M4 18h16\' stroke=\'white\' stroke-width=\'2\' stroke-linecap=\'round\'/%3E%3C/svg%3E") no-repeat center center',
+    backgroundSize: 'contain',
+  };
+
   return (
     <nav className='navbar navbar-dark bg-primary navbar-expand-lg fixed-top px-5 py-3'>
       <div className='container' ref={menuRef}>
-        <Link to="/" className='navbar-brand'>
-          Github Поиск
+        <Link to="/" className='navbar-brand fs-4'>
+          GH-Поиск
         </Link>
         <button
           className='navbar-toggler'
@@ -40,10 +50,10 @@ const Navbar = () => {
           aria-expanded={isOpen}
           aria-label='Toggle navigation'
         >
-          <span className='navbar-toggler-icon'></span>
+          <span className='navbar-toggler-icon' style={burgerIconStyle}></span>
         </button>
         <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id='navbarNav'>
-          <ul className='navbar-nav mx-auto'>
+          <ul className='navbar-nav mx-auto fs-5'>
             <li className='nav-item'>
               <Link to="/" className='nav-link' onClick={closeMenu}>
                 Главная

@@ -7,7 +7,7 @@ const About = () => {
         <h1 className="display-5 text-center">Информация</h1>
         <p className="lead text-center">Версия приложения: <strong>1.0.0</strong></p>
         <div className="text-center mt-4">
-          <a href="/" className="btn btn-primary">Вернуться на главную</a>
+          <a href="/github-search-react" className="btn btn-primary">Вернуться на главную</a>
         </div>
       </div>
     </div>
