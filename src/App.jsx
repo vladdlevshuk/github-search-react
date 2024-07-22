@@ -1,18 +1,23 @@
-import React from "react"
-import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Profile from "./pages/Profile"
+import React from "react";
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
-    <React.Fragment>
+    <BrowserRouter basename="/github-search-react">
       <Navbar />
       <div className="container pt-4">
-        <h1>Hi</h1>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
       </div>
-    </React.Fragment>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
