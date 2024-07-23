@@ -10,9 +10,9 @@ const Home = () => {
     <Fragment>
       <div className='container' style={{ marginTop: '90px' }}>
         <Search />
-        <div className='row' style={{ maxWidth: '1100px', margin: 'auto'}}>
+        <div className='row'>
           {cards.map(card => (
-            <div className='col-sm-4 mb-4' key={card}>
+            <div className='col-sm-4 mb-5' key={card}>
               <Card />
             </div>
           ))}

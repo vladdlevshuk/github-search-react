@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Card = () => {
   return (
-    <div className='card shadow-sm border-light p-4' style={{ maxWidth: '340px' }}>
+    <div className='card shadow-sm border-light p-4' style={{ maxWidth: '380px' }}>
       <img
         src="https://via.placeholder.com/150"
         alt="Placeholder"

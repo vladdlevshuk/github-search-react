@@ -8,6 +8,7 @@ const Search = () => {
           type="text"
           className='form-control'
           placeholder='Введите имя пользователя ...'
+          style={{ height: '50px', padding: '10px' }}
         />
       </div>
     </div>
